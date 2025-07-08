@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Portfolio Design System - Dark Tech Aesthetic */
+
+@layer base {
+  :root {
+    /* Dark theme base colors */
+    --background: 222 14% 6%;
+    --foreground: 210 100% 95%;
+
+    --card: 222 14% 8%;
+    --card-foreground: 210 100% 95%;
+
+    --popover: 222 14% 8%;
+    --popover-foreground: 210 100% 95%;
+
+    /* Electric blue primary */
+    --primary: 194 93% 58%;
+    --primary-foreground: 222 14% 6%;
+
+    /* Secondary teal */
+    --secondary: 172 66% 50%;
+    --secondary-foreground: 222 14% 6%;
+
+    /* Muted grays */
+    --muted: 217 19% 15%;
+    --muted-foreground: 215 25% 65%;
+
+    /* Accent electric blue */
+    --accent: 194 93% 58%;
+    --accent-foreground: 222 14% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 19% 18%;
+    --input: 217 19% 15%;
+    --ring: 194 93% 58%;
+
+    --radius: 0.75rem;
+
+    /* Custom portfolio colors */
+    --neon-blue: 194 93% 58%;
+    --neon-teal: 172 66% 50%;
+    --dark-surface: 222 14% 8%;
+    --darker-surface: 222 14% 6%;
+    --glass-bg: 217 19% 15%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(var(--neon-blue)),
+      hsl(var(--neon-teal))
+    );
+    --gradient-dark: linear-gradient(
+      135deg,
+      hsl(var(--dark-surface)),
+      hsl(var(--darker-surface))
+    );
+    --gradient-glow: linear-gradient(
+      135deg,
+      hsl(var(--neon-blue) / 0.1),
+      hsl(var(--neon-teal) / 0.1)
+    );
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Shadows */
+    --glow-primary: 0 0 30px hsl(var(--neon-blue) / 0.3);
+    --glow-secondary: 0 0 30px hsl(var(--neon-teal) / 0.3);
+    --shadow-lg: 0 20px 25px -5px hsl(222 14% 6% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Glass morphism effect */
+  .glass {
+    @apply bg-glass-bg/20 backdrop-blur-sm border border-border/50;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-secondary {
+    box-shadow: var(--glow-secondary);
+  }
+
+  /* Animated underline */
+  .animated-underline {
+    @apply relative;
+  }
+
+  .animated-underline::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
+  }
+
+  .animated-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Floating animation */
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Pulse glow animation */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0% {
+      box-shadow: 0 0 20px hsl(var(--neon-blue) / 0.2);
+    }
+    100% {
+      box-shadow: 0 0 40px hsl(var(--neon-blue) / 0.4),
+        0 0 60px hsl(var(--neon-teal) / 0.2);
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+
+  /* Stagger delays for animations */
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+  .delay-400 {
+    animation-delay: 0.4s;
+  }
+  .delay-500 {
+    animation-delay: 0.5s;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
