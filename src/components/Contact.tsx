@@ -314,7 +314,7 @@ const Contact = () => {
                   className="border-accent text-accent hover:bg-accent hover:text-accent-foreground"
                   asChild
                 >
-                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=saadiqbal603@gmail.com">
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=saadiqbal603@gmail.com" target="_blank">
                     <Mail className="w-4 h-4 mr-2" />
                     Email Directly
                   </a>
