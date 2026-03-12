@@ -75,7 +75,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center md:text-right">
             <p className="text-sm text-muted-foreground flex items-center justify-center md:justify-end">
-              © {currentYear} Made with{" "}
+              © {2025} Made with{" "}
               <Heart className="w-4 h-4 mx-1 text-accent" /> by Muhammad Saad
             </p>
             <p className="text-xs text-muted-foreground mt-1">
