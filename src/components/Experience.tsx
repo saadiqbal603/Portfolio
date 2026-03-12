@@ -5,11 +5,35 @@ import { Badge } from "@/components/ui/badge";
 const Experience = () => {
   const experiences = [
     {
+      title: "Software Engineer",
+      company: "TechSol360",
+      location: "Karachi, Pakistan",
+      period: "Nov 2025 - Present",
+      status: "Current",
+      description:
+        "Developing and maintaining full-stack applications using modern web and mobile technologies with focus on performance and scalability.",
+      achievements: [
+        "Develop and maintain full-stack applications using ASP.NET Core, Flutter, Vue.js, and SQL Server",
+        "Design, implement, and consume RESTful APIs for web and mobile applications",
+        "Build responsive web interfaces and cross-platform mobile applications",
+        "Collaborate with frontend, backend, and DevOps teams to deliver end-to-end solutions",
+        "Improve application performance and maintain scalable codebases",
+      ],
+      technologies: [
+        "ASP.NET Core",
+        "Flutter",
+        "Vue.js",
+        "SQL Server",
+        "REST APIs",
+        "Jenkins",
+      ],
+    },
+    {
       title: "Software Engineer Trainee",
       company: "TechSol360",
       location: "Karachi, Pakistan",
-      period: "Feb 2025 - Present",
-      status: "Current",
+      period: "Feb 2025 - Oct 2025",
+      status: "Completed",
       description:
         "Building scalable mobile and web applications with focus on performance optimization and user experience.",
       achievements: [
