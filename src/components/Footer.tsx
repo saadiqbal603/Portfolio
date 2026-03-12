@@ -85,13 +85,13 @@ const Footer = () => {
         </div>
 
         {/* Bottom border accent */}
-        <div className="mt-8 pt-6 border-t border-border/30">
+        {/* <div className="mt-8 pt-6 border-t border-border/30">
           <div className="text-center">
             <p className="text-xs text-muted-foreground">
               Built with React, TypeScript, and Tailwind CSS
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
